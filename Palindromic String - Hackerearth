@@ -1,0 +1,22 @@
+Palindromic String
+
+Tag(s): Very-Easy 
+---------------------------------------
+OUTPUT:
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {     
+        Scanner sc = new Scanner(System.in);
+        String s,rev="";
+        int l;
+        s = sc.next();
+        l = s.length();
+        for(int i=l-1; i>=0; i--)
+            rev = rev + s.charAt(i);
+        if(s.equals(rev))
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+    }
+}
