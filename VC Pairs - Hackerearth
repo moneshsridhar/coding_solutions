@@ -1,0 +1,13 @@
+T = int(input())
+for i in range(0,T):
+    N = int(input())
+    S = input()
+    vowels = ['a','e','i','o','u']
+    count = 0
+    if len(S) == N:
+        new_list = list(S)
+        for j in range(0, len(S)-1):
+            if S[j] not in vowels:
+                if S[j+1] in vowels:
+                    count += 1;
+    print(count)
