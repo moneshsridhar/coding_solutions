@@ -1,0 +1,26 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        //Scanner
+        Scanner s = new Scanner(System.in);
+        String str = s.next();
+        int horizontal = 0;
+        int vertical = 0;
+        char[] a = new char[str.length()];
+        a = str.toCharArray();
+        for(int i=0; i<a.length; i++)
+        {
+            if(a[i] == 'L')
+                horizontal--;
+            else if(a[i] == 'R')
+                horizontal++;
+            else if(a[i] == 'D')
+                vertical--;
+            else
+                vertical++;
+        }
+
+        System.out.println(horizontal+" "+vertical);
+
+    }
+}
