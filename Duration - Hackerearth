@@ -1,0 +1,27 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int T = s.nextInt();
+        int[] duration = new int[4];
+        int sh, sm, eh, em;
+        for(int t=0; t<T; t++)
+        {
+            for(int i=0; i<4; i++)
+                duration[i] = s.nextInt();
+            sh = duration[0];
+            sm = duration[1];
+            eh = duration[2];
+            em = duration[3];
+
+            int hours = eh - sh - 1;
+            int minutes = (60 - sm) + em;
+            if(minutes >= 60)
+            {
+                minutes = minutes - 60;
+                hours += 1;
+            }
+            System.out.println(hours+" "+minutes);
+        }
+    }
+}
