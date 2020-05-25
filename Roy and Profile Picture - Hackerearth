@@ -1,0 +1,19 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        String str  = s.next();
+        char[] a = new char[str.length()];
+        a = str.toCharArray();
+
+        for(int i=0; i<a.length; i++)
+        {
+            if(Character.isUpperCase(a[i]))
+                a[i] = Character.toLowerCase(a[i]);
+            else
+                a[i] = Character.toUpperCase(a[i]);
+        }
+        Arrays.toString(a);
+        System.out.println(a);  
+    }
+}
