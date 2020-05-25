@@ -1,0 +1,26 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[]) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+        int Patlu = 0, Motu = 0;
+        int patluscore = 0, motuscore = 0;
+        for(int i=1; i<=N; i++)
+        {
+            Patlu = i;
+            patluscore = patluscore + Patlu + Motu;
+            Motu = i * 2;
+            motuscore = motuscore + Patlu + Motu;
+            if(patluscore > N)
+            {
+                System.out.println("Patlu");
+                break;
+            }
+            if(motuscore > N)
+            {
+                System.out.println("Motu");
+                break;
+            }
+        }
+    }
+}
