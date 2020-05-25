@@ -1,0 +1,16 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+        int minimum_skills_required = s.nextInt();
+        for(int i=1; i<=N; i++)
+        {
+            int people_skills = s.nextInt();
+            if(people_skills >= minimum_skills_required)
+                System.out.println("YES");
+            else
+                System.out.println("NO");
+        }
+    }
+}
