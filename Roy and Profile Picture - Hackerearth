@@ -2,18 +2,23 @@ import java.util.*;
 class TestClass {
     public static void main(String args[] ) throws Exception {
         Scanner s = new Scanner(System.in);
-        String str  = s.next();
-        char[] a = new char[str.length()];
-        a = str.toCharArray();
-
-        for(int i=0; i<a.length; i++)
+        int L, W, H, N;
+        int[] a = new int[2];
+        L = s.nextInt();
+        N = s.nextInt();
+        for(int i=0; i<N; i++)
         {
-            if(Character.isUpperCase(a[i]))
-                a[i] = Character.toLowerCase(a[i]);
+            for(int j=0; j<2; j++)
+                a[j] = s.nextInt();
+            W = a[0];
+            H = a[1];
+
+            if(W < L || H < L)
+                System.out.println("UPLOAD ANOTHER"); 
+            else if(W == H)
+                System.out.println("ACCEPTED");
             else
-                a[i] = Character.toUpperCase(a[i]);
+                System.out.println("CROP IT");
         }
-        Arrays.toString(a);
-        System.out.println(a);  
     }
 }
