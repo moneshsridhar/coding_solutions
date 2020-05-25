@@ -1,0 +1,11 @@
+N = int(input())
+data = [int(x) for x in input().split()]
+string = ''
+for i in range(0, len(data)):
+    remainder = data[i] % 10;
+    string = string + str(remainder)
+new_data = int(string)
+if(new_data % 10 == 0):
+    print("Yes")
+else:
+    print("No")
