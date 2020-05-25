@@ -1,0 +1,2 @@
+new_list = list(map(int,input().split()))[:3]
+print(max(new_list))
