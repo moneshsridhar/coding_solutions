@@ -1,0 +1,26 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        int T = scan.nextInt();
+        String[] str = new String[2];
+        String s1, s2;
+        for(int t=0; t<T; t++)
+        {
+            for(int s=0; s<2; s++)
+                str[s] = scan.next();
+            s1 = str[0];
+            s2 = str[1];
+            char[] a = new char[s1.length()];
+            char[] b = new char[s2.length()];
+            a = s1.toCharArray();
+            b = s2.toCharArray();
+            Arrays.sort(a);
+            Arrays.sort(b);
+            if(Arrays.equals(a,b))
+                System.out.println("YES");
+            else
+                System.out.println("NO");
+        }
+    }
+}
