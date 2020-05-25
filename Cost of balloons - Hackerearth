@@ -1,0 +1,46 @@
+
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int T, n;
+        int[] cost = new int[2];
+        int[] status = new int[2];
+        int color_gp = 0;
+        int color_pg = 0;
+        T = s.nextInt();
+        for(int t=0; t<T; t++)
+        {
+            int green = 0;
+            int purple = 0;
+            int cgreen = 0;
+            int cpurple = 0;
+            for(int c=0; c<2; c++)
+                cost[c] = s.nextInt();
+            n = s.nextInt();
+            for(int i=0; i<n; i++)
+            {
+                for(int j=0; j<2; j++)
+                    status[j] = s.nextInt();
+                
+                if(status[0] == 1){
+                    green += cost[0];
+                    cpurple += cost[1];
+                }
+
+                if(status[1] == 1){
+                    purple += cost[1];
+                    cgreen += cost[0];
+                }
+            }
+            color_gp = green + purple;
+            color_pg = cgreen + cpurple;
+            
+             if(color_gp < color_pg)
+                 System.out.println(color_gp);
+             else
+                System.out.println(color_pg);
+        }
+
+    }
+}
