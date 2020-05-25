@@ -1,0 +1,17 @@
+import java.util.*;
+class TestClass {
+    static int fact(int n)
+    {
+        if(n==0)
+            return 1;
+        else
+            return n * fact(n-1);
+    }
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+
+        int factorial = fact(N);
+        System.out.println(factorial);
+    }
+}
