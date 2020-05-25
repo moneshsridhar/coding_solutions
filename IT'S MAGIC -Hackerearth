@@ -1,0 +1,12 @@
+T = int(input())
+List = list(map(int,input().split()))
+n = sum(List)
+new_list = []
+for i in List:
+    if (n - i) % 7 == 0:
+        new_list.append(i)
+if len(new_list) > 0:
+    print(List.index(min(new_list)))
+else:
+    print(-1)
+
