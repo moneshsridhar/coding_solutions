@@ -1,0 +1,38 @@
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner s = new Scanner(System.in);
+        String str = s.next();
+        char a[] = str.toCharArray();
+        boolean flag = true;
+        for(int i=0; i<8; i++)
+        {
+            if(Character.isDigit(a[i]) && Character.isDigit(a[i+1]))
+            {
+                if((a[i] + a[i+1]) % 2 == 0)
+                    flag = true;
+                else
+                {
+                    flag = false;
+                    break;
+                }      
+            }
+        }
+        if(Character.isLetter(a[2]))
+            {
+                char vowels[] = {'A','E','I','O','U','Y'};
+                for(int j=0; j<vowels.length; j++)
+                {
+                    if(a[2] == vowels[j])
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+        if(flag)
+            System.out.println("valid");
+        else
+            System.out.println("invalid");
+    }
+}
